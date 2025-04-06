@@ -4,7 +4,7 @@ class HelloResponse<Request extends IncomingMessage = IncomingMessage>
   extends ServerResponse<Request> {
   public hello() {
     this.statusCode = 200;
-    return this.end("Hello, world!");
+    return this.end("Hello from HelloResponse!");
   }
 }
 
@@ -14,10 +14,10 @@ const server = createServer({
 
 server.on("request", (request, response) => {
   if (request.url === "/") {
-    response.hello();
+    return response.hello();
   }
 
-  response.end("Hello, world");
+  return response.end("Hello from the server!");
 });
 
 server.on("listening", () => console.log("Started: http://localhost:3000"));

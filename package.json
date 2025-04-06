@@ -1,0 +1,23 @@
+{
+  "name": "deno-http-bug",
+  "version": "1.0.0",
+  "description": "This repository demonstrates a bug in Deno's handling of Node.js `http` module compatibility when attempting to extend the `ServerResponse` type.",
+  "main": "main.ts",
+  "scripts": {
+    "dev": "node --experimental-strip-types main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c43721/deno-http-bug.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c43721/deno-http-bug/issues"
+  },
+  "homepage": "https://github.com/c43721/deno-http-bug#readme",
+  "devDependencies": {
+    "@types/node": "^22.14.0"
+  }
+}
