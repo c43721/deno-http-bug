@@ -12,8 +12,14 @@ const server = createServer({
   ServerResponse: HelloResponse,
 });
 
-server.on("request", (_request, response) => response.hello());
+server.on("request", (request, response) => {
+  if (request.url === "/") {
+    response.hello();
+  }
+
+  response.end("Hello, world");
+});
 
 server.on("listening", () => console.log("Started: http://localhost:3000"));
 
-server.listen(3000)
+server.listen(3000);
