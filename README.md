@@ -6,19 +6,29 @@ compatibility when attempting to extend the `ServerResponse` type.
 ## The Issue
 
 When creating an HTTP server using `node:http` with options to extend the
-`ServerResponse`, Deno does not properly extend or create the incoming response object.
-This differs from Node.js behavior where the response object is correctly
-extended.
+`ServerResponse`, Deno does not properly extend or create the incoming response
+object. This differs from Node.js behavior where the response object is
+correctly extended.
 
 ## Running the Code
 
 ### With Deno
+
+Run the server with `deno`:
 
 ```bash
 deno task dev
 ```
 
 ### With Node.js
+
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then run the server:
 
 ```bash
 npm run dev
