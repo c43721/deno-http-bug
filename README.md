@@ -59,3 +59,17 @@ Navigating to `http://localhost:3000` returns "Internal Server Error".
 
 - Deno version: deno 2.2.8
 - Node.js version: v22.14.0
+
+## Reference
+
+- https://github.com/denoland/deno/issues/28768
+
+## Resources
+
+Node instantiates the class here: https://github.com/nodejs/node/blob/main/lib/_http_server.js#L1066
+
+Which is set from the options like so: https://github.com/nodejs/node/blob/main/lib/_http_server.js#L446
+
+Which is then called up in `new Server`: https://github.com/nodejs/node/blob/main/lib/_http_server.js#L547
+
+Seems like no matter what, you're getting a `ServerResponse` here: https://github.com/denoland/deno/blob/main/ext/node/polyfills/http.ts#L1958
