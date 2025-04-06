@@ -34,6 +34,11 @@ Then run the server:
 npm run dev
 ```
 
+### With a debugger
+
+There are 2 launch options: one for Deno and the other for Node. You can use
+this to help debug better.
+
 ## Expected Behavior
 
 When navigating to `http://localhost:3000`, the server should return "Hello from
